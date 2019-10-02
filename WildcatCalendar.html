@@ -20,11 +20,21 @@
           plugins: [ 'dayGrid', 'timeGrid' ],
           defaultView: 'timeGridWeek'
         }
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        });
+        var calendar = new Calendar(calendarEl, {
+          customButtons: {
+            myCustomButton: {
+              text: 'custom!',
+              click: function() {
+                alert('clicked the custom button!');
+              }
+            }
+          },
+          header: {
+            left: 'prev,next today myCustomButton',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          }
+        }););
 
         calendar.render();
       });
