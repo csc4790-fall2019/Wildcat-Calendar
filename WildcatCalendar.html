@@ -17,7 +17,12 @@
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-           plugins: [ 'dayGrid', 'timeGrid' ],
+           plugins: [ 'dayGrid', 'timeGrid', 'list'],
+           views: {
+            listDay: { buttonText: 'list day' },
+            listWeek: { buttonText: 'list week' },
+            listMonth: { buttonText: 'list month' }
+          },
            nowIndicator: true,
            header: {
              left: 'dayGridMonth,timeGridWeek,timeGridDay',
@@ -25,7 +30,7 @@
              right: 'prevYear,prev,next,nextYear'
            },
            footer: {
-             left: '',
+             left: 'listDay,listWeek,listMonth',
              center: '',
              right: 'prev,next'
            },
