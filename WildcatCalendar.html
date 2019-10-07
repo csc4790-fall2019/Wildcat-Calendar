@@ -17,20 +17,20 @@
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-   plugins: [ 'dayGrid', 'timeGrid' ],
-   nowIndicator: true,
-   header: {
-     left: 'dayGridMonth,timeGridWeek,timeGridDay',
-     center: 'title',
-     right: 'prevYear,prev,next,nextYear'
-   },
-   footer: {
-     left: '',
-     center: '',
-     right: 'prev,next'
-   },
-   events: 'https://fullcalendar.io/demo-events.json'
- });
+           plugins: [ 'dayGrid', 'timeGrid' ],
+           nowIndicator: true,
+           header: {
+             left: 'dayGridMonth,timeGridWeek,timeGridDay',
+             center: 'title',
+             right: 'prevYear,prev,next,nextYear'
+           },
+           footer: {
+             left: '',
+             center: '',
+             right: 'prev,next'
+           },
+           events: 'https://fullcalendar.io/demo-events.json'
+         });
 
         calendar.render();
       });
