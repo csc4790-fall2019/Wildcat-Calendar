@@ -14,6 +14,8 @@
     <script src='packages/timegrid/main.js'></script>
     <script src='packages/list/main.js'></script>
     <script src='packages/interaction/main.js'></script>
+    <script src='packages/core/main.js'></script>
+    <script src='packages/google-calendar/main.js'></script>
 
     <script>
 
@@ -41,7 +43,11 @@
         // -----------------------------------------------------------------
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-           plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list'],
+           plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list', 'googleCalendar'],
+           googleCalendarApiKey: 'AIzaSyDgMp1V84pk9vCy7_0okx2umZe0HdyYP7k',
+           events: {
+             googleCalendarId: 'villanova.edu_alhdf4npnbkcobt49kqrf2t8mo@group.calendar.google.com'
+           },
            views: {
             listDay: { buttonText: 'list day' },
             listWeek: { buttonText: 'list week' },
