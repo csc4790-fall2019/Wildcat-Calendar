@@ -25,11 +25,12 @@
 
         var containerEl = document.getElementById('external-events');
         var calendarEl = document.getElementById('calendar');
-        var checkbox = document.getElementById('drop-remove');
+        //var checkbox = document.getElementById('drop-remove');
 
         // initialize the external events
         // -----------------------------------------------------------------
 
+        /*
         new Draggable(containerEl, {
           itemSelector: '.fc-event',
           eventData: function(eventEl) {
@@ -38,6 +39,7 @@
             };
           }
         });
+        */
 
         // initialize the calendar
         // -----------------------------------------------------------------
@@ -64,6 +66,7 @@
              center: '',
              right: 'prev,next'
            },
+           /*
            editable: true,
            droppable: true, // this allows things to be dropped onto the calendar
            drop: function(info) {
@@ -73,6 +76,7 @@
                info.draggedEl.parentNode.removeChild(info.draggedEl);
              }
            }
+           */
          });
 
         calendar.render();
@@ -82,6 +86,7 @@
   </head>
   <body>
 
+    <!--
     <div id='external-events'>
       <p>
         <strong>Draggable Events</strong>
@@ -96,7 +101,7 @@
         <label for='drop-remove'>remove after drop</label>
       </p>
     </div>
-
+    -->
     <div id='calendar-container'>
       <div id='calendar'></div>
     </div>
