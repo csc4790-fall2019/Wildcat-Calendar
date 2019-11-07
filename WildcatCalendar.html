@@ -47,10 +47,8 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
            plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list', 'googleCalendar'],
            googleCalendarApiKey: 'AIzaSyCdK2l95X8D5_BtLss-TxZ_yH9asjgbIDE',
-           events: {
-             googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
-             className: 'gcal-event'
-           },
+           events: 'en.usa#holiday@group.v.calendar.google.com',
+           
            views: {
             listDay: { buttonText: 'list day' },
             listWeek: { buttonText: 'list week' },
