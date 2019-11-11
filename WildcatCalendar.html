@@ -79,7 +79,14 @@
              }
            },
            googleCalendarApiKey: 'AIzaSyDWwa76oPfBoJCLhIr0--N5cqQcnoO9hLM',
-           events: '31m8sc3lvahou8rqj4t28j8lpc@group.calendar.google.com'
+           eventSources: [
+             {
+               googleCalendarId: '31m8sc3lvahou8rqj4t28j8lpc@group.calendar.google.com'
+             },
+             {
+               googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com'
+             }
+           ]
          });
 
         calendar.render();
