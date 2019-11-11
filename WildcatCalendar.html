@@ -15,7 +15,6 @@
     <script src='packages/list/main.js'></script>
     <script src='packages/interaction/main.js'></script>
     <script src='packages/core/main.js'></script>
-    <script src='packages/google-calendar/main.js'></script>
 
     <script>
 
@@ -25,12 +24,12 @@
 
         var containerEl = document.getElementById('external-events');
         var calendarEl = document.getElementById('calendar');
-        //var checkbox = document.getElementById('drop-remove');
+        var checkbox = document.getElementById('drop-remove');
 
         // initialize the external events
         // -----------------------------------------------------------------
 
-        /*
+
         new Draggable(containerEl, {
           itemSelector: '.fc-event',
           eventData: function(eventEl) {
@@ -39,15 +38,13 @@
             };
           }
         });
-        */
+
 
         // initialize the calendar
         // -----------------------------------------------------------------
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-           plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list', 'googleCalendar'],
-           googleCalendarApiKey: 'AIzaSyCaIPhP6DF48LKi--p_QXSX9iG8AMXE8x0',
-           events: '72ib4hf0gnrh5lggam7cg84hdk@group.calendar.google.com',
+           plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list'],
 
            views: {
             listDay: { buttonText: 'list day' },
@@ -65,7 +62,7 @@
              center: '',
              right: 'prev,next'
            },
-           /*
+
            editable: true,
            droppable: true, // this allows things to be dropped onto the calendar
            drop: function(info) {
@@ -75,7 +72,7 @@
                info.draggedEl.parentNode.removeChild(info.draggedEl);
              }
            }
-           */
+
          });
 
         calendar.render();
@@ -85,7 +82,7 @@
   </head>
   <body>
 
-    <!--
+
     <div id='external-events'>
       <p>
         <strong>Draggable Events</strong>
@@ -100,7 +97,7 @@
         <label for='drop-remove'>remove after drop</label>
       </p>
     </div>
-    -->
+
     <div id='calendar-container'>
       <div id='calendar'></div>
     </div>
