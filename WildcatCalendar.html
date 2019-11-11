@@ -13,6 +13,7 @@
     <script src='packages/daygrid/main.js'></script>
     <script src='packages/timegrid/main.js'></script>
     <script src='packages/list/main.js'></script>
+    <script src='packages/google-calendar/main.js'></script>
     <script src='packages/interaction/main.js'></script>
 
     <script>
@@ -76,8 +77,9 @@
                // if so, remove the element from the "Draggable Events" list
                info.draggedEl.parentNode.removeChild(info.draggedEl);
              }
-           }
-
+           },
+           googleCalendarApiKey: 'AIzaSyDWwa76oPfBoJCLhIr0--N5cqQcnoO9hLM',
+           events: '31m8sc3lvahou8rqj4t28j8lpc@group.calendar.google.com'
          });
 
         calendar.render();
