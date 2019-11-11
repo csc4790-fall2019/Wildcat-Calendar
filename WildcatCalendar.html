@@ -44,7 +44,7 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
            plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list'],
-
+           selectable: true,
            views: {
             listDay: { buttonText: 'list day' },
             listWeek: { buttonText: 'list week' },
@@ -61,7 +61,14 @@
              center: '',
              right: 'prev,next'
            },
+           dateClick: function(info) {
+             alert('clicked ' + info.dateStr);
+           },
+           select: function(info) {
+             alert('selected ' + info.startStr + ' to ' + info.endStr);
+           },
            editable: true,
+           eventLimit: true, // when too many events in a day, show the popover
            droppable: true, // this allows things to be dropped onto the calendar
            drop: function(info) {
              // is the "remove after drop" checkbox checked?
@@ -82,13 +89,13 @@
 
     <div id='external-events'>
       <p>
-        <strong>Draggable Events</strong>
+        <strong>My Personal Courses</strong>
       </p>
-      <div class='fc-event'>My Event 1</div>
-      <div class='fc-event'>My Event 2</div>
-      <div class='fc-event'>My Event 3</div>
-      <div class='fc-event'>My Event 4</div>
-      <div class='fc-event'>My Event 5</div>
+      <div class='fc-event'>CSC4790: Senior Projects</div>
+      <div class='fc-event'>CSC4300: Computer Graphics</div>
+      <div class='fc-event'>CSC4450: Digital Forensics</div>
+      <div class='fc-event'>VSB2009: Finance</div>
+      <div class='fc-event'>THE2029: Fundamentals of Acting</div>
       <p>
         <input type='checkbox' id='drop-remove' />
         <label for='drop-remove'>remove after drop</label>
