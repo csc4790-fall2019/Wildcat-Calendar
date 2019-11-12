@@ -13,7 +13,8 @@ html, body {
   width: 250px;
   padding: 0 10px;
   border: 1px solid #ccc;
-  background: #a9a9a9;
+  background: #111522;
+  color: #fff;
 }
 
 #external-events .fc-event {
