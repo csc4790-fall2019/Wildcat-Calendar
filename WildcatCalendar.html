@@ -81,12 +81,17 @@
            googleCalendarApiKey: 'AIzaSyDWwa76oPfBoJCLhIr0--N5cqQcnoO9hLM',
            eventSources: [
              {
-               googleCalendarId: '31m8sc3lvahou8rqj4t28j8lpc@group.calendar.google.com'
+               googleCalendarId: '31m8sc3lvahou8rqj4t28j8lpc@group.calendar.google.com',
+               color: '#C2CAD0',
+               textColor: 'black'
              },
              {
-               googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com'
+               googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
+               color: '#AFD275',
+               textColor: 'black'
              }
            ]
+
          });
 
         calendar.render();
@@ -95,6 +100,10 @@
     </script>
   </head>
   <body>
+
+    <div id='main-logo'>
+      <img class='pic' src='logo.png' width='400px'/>
+    </div>
 
     <div id='external-events'>
       <p>
